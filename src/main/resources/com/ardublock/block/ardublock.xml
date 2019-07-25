@@ -25,8 +25,8 @@
 	</BlockConnectorShapes>
 	<BlockGenuses>
 		<BlockGenus name="dummy" kind="command" initlabel="" color="0 0 0" />
-	    <!-- ******************** NEW FOR LOOP **************** -->
-<BlockGenus name="repeat_control" kind="command" color="255 221 0" initlabel="bg.repeat_control">
+		<!-- ******************** NEW FOR LOOP **************** -->
+		<BlockGenus name="repeat_control" kind="command" color="255 221 0" initlabel="bg.repeat_control">
 			<description>
 				<text>repeat</text>
 				<arg-description n="1" name="variable">
@@ -62,7 +62,7 @@
 				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
-		
+
 		<!-- ******************** Controls Menu *************** -->
 		<BlockGenus name="program" kind="command" color="255 240 0" initlabel="bg.program" is-starter="yes" is-terminator="yes" label-unique="no">
 			<description>
@@ -11068,6 +11068,274 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+
+		<!-- Rastuino -->
+		<BlockGenus name="Rastuino_Encender" kind="command" color="40 164 222" initlabel="bg.Rastuino_Encender">
+			<description>
+				<text>turns on a Rastuino output</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="RastuinoPin_1" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Rastuino/encendido.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_Apagar" kind="command" color="40 164 222" initlabel="bg.Rastuino_Apagar">
+			<description>
+				<text>turns on a Rastuino output</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="RastuinoPin_1" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Rastuino/apagado.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_Invertir" kind="command" color="40 164 222" initlabel="bg.Rastuino_Invertir">
+			<description>
+				<text>turns on a Rastuino output</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="RastuinoPin_1" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Rastuino/invertir.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_ReadDig" kind="data" color="77 191 169" initlabel="bg.Rastuino_ReadDig">
+			<description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="RastuinoPin_1" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_ReadAna" kind="data" color="77 191 169" initlabel="bg.Rastuino_ReadAna">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="RastuinoPin_1" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_WriteAna" kind="command" color="213 0 0" initlabel="bg.Rastuino_WriteAna">
+			<description>
+				<text>write analog to pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="RastuinoPin_1" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_BotonPres1" kind="command" color="40 164 222" initlabel="bg.Rastuino_BotonPres1">
+			<description>
+				<text>Waits for a button press</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="RastuinoPin_1" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Rastuino/boton_pres.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="comment" kind="command" color="125 125 125" initlabel="bg.comment">
+			<description>
+				<text>Source code comment</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="glue_msg" label="comment" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_SalidaBeep" kind="command" color="40 164 222" initlabel="bg.Rastuino_SalidaBeep">
+			<description>
+				<text>Selects the speacker output</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="RastuinoPin_1" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Rastuino/speaker_cual.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_Beep" kind="command" color="40 164 222" initlabel="bg.Rastuino_Beep">
+			<description>
+				<text>Make a tone</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Rastuino/speaker.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_CalibrarMotor" kind="command" color="40 164 222" initlabel="bg.Rastuino_CalibrarMotor">
+			<description>
+				<text>write analog to pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="RastuinoMotor_2" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="190" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_Avanzar" kind="command" color="40 164 222" initlabel="bg.Rastuino_Avanzar">
+			<description>
+				<text>Move forward</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Rastuino/avanzar.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_Retroceder" kind="command" color="40 164 222" initlabel="bg.Rastuino_Retroceder">
+			<description>
+				<text>Move backward</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Rastuino/retroceder.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_Izquierda" kind="command" color="40 164 222" initlabel="bg.Rastuino_Izquierda">
+			<description>
+				<text>Turn left</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Rastuino/izquierda.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_Derecha" kind="command" color="40 164 222" initlabel="bg.Rastuino_Derecha">
+			<description>
+				<text>Turn right</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Rastuino/derecha.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Rastuino_Frenar" kind="command" color="40 164 222" initlabel="bg.Rastuino_Frenar">
+			<description>
+				<text>Stop movement</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Rastuino/frenar.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="RastuinoPin_1" kind="data" color="214 169 54" initlabel="bg.RastuinoPin_1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RastuinoPin_2" kind="data" color="214 169 54" initlabel="bg.RastuinoPin_2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RastuinoPin_3" kind="data" color="214 169 54" initlabel="bg.RastuinoPin_3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RastuinoPin_4" kind="data" color="214 169 54" initlabel="bg.RastuinoPin_4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="RastuinoMotor_1" kind="data" color="214 169 54" initlabel="bg.RastuinoMotor_1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="RastuinoMotor_2" kind="data" color="214 169 54" initlabel="bg.RastuinoMotor_2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		
 	</BlockGenuses>
 
 <!-- Start of Ardublock Standard UI layout -->
@@ -11718,6 +11986,17 @@
 			<FamilyMember>Midi_AS</FamilyMember>
 			<FamilyMember>Midi_B</FamilyMember>
 		</BlockFamily>
+                <!-- Rastuino -->
+		<BlockFamily>
+			<FamilyMember>RastuinoPin_1</FamilyMember>
+			<FamilyMember>RastuinoPin_2</FamilyMember>
+			<FamilyMember>RastuinoPin_3</FamilyMember>
+			<FamilyMember>RastuinoPin_4</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>RastuinoMotor_1</FamilyMember>
+			<FamilyMember>RastuinoMotor_2</FamilyMember>
+		</BlockFamily>
 		
 	</BlockFamilies>
 
@@ -11743,6 +12022,28 @@
 				<BlockGenusMember>subroutine-ref_var</BlockGenusMember>
 				<BlockGenusMember>ref_var</BlockGenusMember>
 			</BlockDrawer>
+
+                        <!-- Rastuino -->
+			<BlockDrawer button-color="30 122 165" name="bd.rastuino" type="factory">
+				<BlockGenusMember>Rastuino_Encender</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Apagar</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Invertir</BlockGenusMember>
+				<BlockGenusMember>RastuinoPin_1</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Avanzar</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Retroceder</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Izquierda</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Derecha</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Frenar</BlockGenusMember>
+				<BlockGenusMember>Rastuino_ReadDig</BlockGenusMember>
+				<BlockGenusMember>Rastuino_ReadAna</BlockGenusMember>
+				<BlockGenusMember>Rastuino_WriteAna</BlockGenusMember>
+				<BlockGenusMember>Rastuino_BotonPres1</BlockGenusMember>
+				<BlockGenusMember>Rastuino_CalibrarMotor</BlockGenusMember>
+				<BlockGenusMember>Rastuino_SalidaBeep</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Beep</BlockGenusMember>
+				<BlockGenusMember>comment</BlockGenusMember>
+			</BlockDrawer>
+
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-toggle</BlockGenusMember>
