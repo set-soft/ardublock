@@ -5,7 +5,19 @@ ArduBlock is a Block Programming Language for Arduino. The language and function
 
 Installation
 ----
-The project is managed by Maven. After checking out the source for the first time, one should run the following to install Arduino's pde.jar into the local repository. 
+
+The project is managed by Maven, so you need to install it. (i.e. apt get install maven)
+
+This project depends on [OpenBlocks](https://github.com/taweili/openblocks), so first install it like this:
+
+	$ git clone https://github.com/taweili/openblocks.git
+	$ cd openblocks
+	$ mvn clean package
+	$ mvn install:install-file -DgroupId=edu.mit -DartifactId=openblocks -Dversion=1.0.2-SNAPSHOT -Dpackaging=jar -Dfile=target/openblocks-1.0.2-SNAPSHOT.jar
+
+Then check out this project.
+
+After checking out the source for the first time, one should run the following to install Arduino's pde.jar into the local repository.
 
 	$ mvn validate
 
@@ -16,7 +28,23 @@ Usage
 
 Development
 ----
-Change the /src/main/resources/com/ardublock/block/ardublock_def.xml to add new blocks to ArduBlock
+To add new blocks to ArduBlock edit:
+
+	src/main/resources/com/ardublock/block/ardublock.xml
+
+The strings associated to the block must be defined here:
+
+	src/main/resources/com/ardublock/block/ardublock.properties
+
+The classes that implements the blocks must be in a subdir here:
+
+	src/main/java/com/ardublock/translator/block/
+
+To associate the blocks with the classes edit:
+
+	src/main/resources/com/ardublock/block/block-mapping.properties
+
+Then you can test it running:
 
 	$ mvn clean package
 
