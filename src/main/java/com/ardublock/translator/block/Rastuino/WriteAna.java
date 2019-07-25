@@ -26,7 +26,8 @@ public class WriteAna extends TranslatorBlock
 	{
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		TranslatorBlock translatorBlock2 = this.getRequiredTranslatorBlockAtSocket(1);
-
+		translator.addHeaderFile("Rastuino.h");
+		translator.addSetupCommand("Inicializar();");
 		String ret = "EscribirAnalogico(" + translatorBlock.toCode() + "," +
 			translatorBlock2.toCode() + ");\n";
 		return codePrefix + ret + codeSuffix;
