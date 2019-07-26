@@ -5113,11 +5113,11 @@
 			</BlockConnectors>		
 		</BlockGenus>
 		
-		<BlockGenus name="DuinoEDU_not_equal" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_not_equal" editable-label="no">
+		<!-- <BlockGenus name="DuinoEDU_not_equal" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_not_equal" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>		
-		</BlockGenus>
+		</BlockGenus> -->
 		
 			<BlockGenus name="DuinoEDU_Mouse_Xmove" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Mouse_Xmove">
 			<description>
