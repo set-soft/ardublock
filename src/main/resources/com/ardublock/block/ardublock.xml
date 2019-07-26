@@ -11088,7 +11088,7 @@
 
 		<BlockGenus name="Rastuino_Apagar" kind="command" color="40 164 222" initlabel="bg.Rastuino_Apagar">
 			<description>
-				<text>turns on a Rastuino output</text>
+				<text>turns off a Rastuino output</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="#">
@@ -11104,7 +11104,7 @@
 
 		<BlockGenus name="Rastuino_Invertir" kind="command" color="40 164 222" initlabel="bg.Rastuino_Invertir">
 			<description>
-				<text>turns on a Rastuino output</text>
+				<text>toggle a Rastuino output</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="#">
@@ -11986,7 +11986,7 @@
 			<FamilyMember>Midi_AS</FamilyMember>
 			<FamilyMember>Midi_B</FamilyMember>
 		</BlockFamily>
-                <!-- Rastuino -->
+		<!-- Rastuino -->
 		<BlockFamily>
 			<FamilyMember>RastuinoPin_1</FamilyMember>
 			<FamilyMember>RastuinoPin_2</FamilyMember>
@@ -11997,7 +11997,6 @@
 			<FamilyMember>RastuinoMotor_1</FamilyMember>
 			<FamilyMember>RastuinoMotor_2</FamilyMember>
 		</BlockFamily>
-		
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -12022,28 +12021,6 @@
 				<BlockGenusMember>subroutine-ref_var</BlockGenusMember>
 				<BlockGenusMember>ref_var</BlockGenusMember>
 			</BlockDrawer>
-
-                        <!-- Rastuino -->
-			<BlockDrawer button-color="30 122 165" name="bd.rastuino" type="factory">
-				<BlockGenusMember>Rastuino_Encender</BlockGenusMember>
-				<BlockGenusMember>Rastuino_Apagar</BlockGenusMember>
-				<BlockGenusMember>Rastuino_Invertir</BlockGenusMember>
-				<BlockGenusMember>RastuinoPin_1</BlockGenusMember>
-				<BlockGenusMember>Rastuino_Avanzar</BlockGenusMember>
-				<BlockGenusMember>Rastuino_Retroceder</BlockGenusMember>
-				<BlockGenusMember>Rastuino_Izquierda</BlockGenusMember>
-				<BlockGenusMember>Rastuino_Derecha</BlockGenusMember>
-				<BlockGenusMember>Rastuino_Frenar</BlockGenusMember>
-				<BlockGenusMember>Rastuino_ReadDig</BlockGenusMember>
-				<BlockGenusMember>Rastuino_ReadAna</BlockGenusMember>
-				<BlockGenusMember>Rastuino_WriteAna</BlockGenusMember>
-				<BlockGenusMember>Rastuino_BotonPres1</BlockGenusMember>
-				<BlockGenusMember>Rastuino_CalibrarMotor</BlockGenusMember>
-				<BlockGenusMember>Rastuino_SalidaBeep</BlockGenusMember>
-				<BlockGenusMember>Rastuino_Beep</BlockGenusMember>
-				<BlockGenusMember>comment</BlockGenusMember>
-			</BlockDrawer>
-
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-toggle</BlockGenusMember>
@@ -12618,6 +12595,26 @@
 				<BlockGenusMember>xcj_ms_digital_write</BlockGenusMember>
 			</BlockDrawer>
 			-->
+			<!-- Rastuino -->
+			<BlockDrawer button-color="30 122 165" name="bd.rastuino" type="factory">
+				<BlockGenusMember>Rastuino_Encender</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Apagar</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Invertir</BlockGenusMember>
+				<BlockGenusMember>RastuinoPin_1</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Avanzar</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Retroceder</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Izquierda</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Derecha</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Frenar</BlockGenusMember>
+				<BlockGenusMember>Rastuino_ReadDig</BlockGenusMember>
+				<BlockGenusMember>Rastuino_ReadAna</BlockGenusMember>
+				<BlockGenusMember>Rastuino_WriteAna</BlockGenusMember>
+				<BlockGenusMember>Rastuino_BotonPres1</BlockGenusMember>
+				<BlockGenusMember>Rastuino_CalibrarMotor</BlockGenusMember>
+				<BlockGenusMember>Rastuino_SalidaBeep</BlockGenusMember>
+				<BlockGenusMember>Rastuino_Beep</BlockGenusMember>
+				<BlockGenusMember>comment</BlockGenusMember>
+			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer (see slcodeblocks.ShapeBlocksGenerator for details) -->
 			<!-- Sound blocks reside in the auto-generated String drawer. (see slcodeblocks.SoundBlocksGenerator for details) -->
 		</BlockDrawerSet>
